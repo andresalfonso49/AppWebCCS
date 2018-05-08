@@ -8,7 +8,9 @@ import django.contrib.auth.views
 
 import app.forms
 import app.views
-
+#from django.contrib import admin
+#python manage.py createsuperuser para crear admin de la página url\admin
+#para migrar python manage.py migrate al error 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
 # from django.contrib import admin
@@ -16,6 +18,7 @@ import app.views
 
 urlpatterns = [
     # Examples:
+    #url(r'^admin',admin.site.urls),
     url(r'^$', app.views.home, name='home'),
     url(r'^contact$', app.views.contact, name='contact'),
     url(r'^about', app.views.about, name='about'),
